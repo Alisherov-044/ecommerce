@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .button {
+    @apply relative px-4 rounded-md h-10 cursor-pointer
+  }
+
+  .button.primary {
+    @apply bg-blue-500 text-white font-medium text-center
+  }
+}

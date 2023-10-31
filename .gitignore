@@ -1,0 +1,8 @@
+node_modules
+.env*.local
+/coverage
+/.next/
+/build
+yarn-debug.log*
+yarn-error.log*
+.vercel
