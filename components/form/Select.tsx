@@ -30,7 +30,7 @@ export function Select({
       <Icons.selectArrow />
       <div
         className={clsx([
-          'absolute border-inherit w-[calc(100%+4px)] left-0 bottom-0 translate-y-full -translate-x-[2px] transition-opacity',
+          'absolute border-inherit w-[calc(100%+4px)] left-0 bottom-0 translate-y-full -translate-x-[2px] transition-all',
           !isOpen && 'opacity-0 pointer-events-none -z-50',
         ])}
       >

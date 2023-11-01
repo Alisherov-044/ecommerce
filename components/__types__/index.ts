@@ -37,3 +37,15 @@ export interface IInput {
   type?: 'text' | 'search' | 'number' | 'checkbox'
   variant?: 'primary'
 }
+
+export interface IBackdrop {
+  className?: string
+  active: boolean
+  onClose: () => void
+  children: ReactNode
+}
+
+export interface ISidebar {
+  isOpen: boolean
+  close: () => void
+}

@@ -1,7 +1,8 @@
 'use client'
 import Link from 'next/link'
+import { useSidebar } from '@/hooks'
 import { headerPages } from '@/data'
-import { Icons, GenericSearchInput, Input } from '@/components'
+import { Icons, GenericSearchInput, Input, Sidebar } from '@/components'
 
 const options = [
   {
@@ -39,12 +40,15 @@ const options = [
 ]
 
 export function Header() {
+  const { isOpen, open, close } = useSidebar()
+
   return (
     <header className="relative w-full flex flex-col">
       <div className="relative w-full border-b-[1px] border-b-gray-300 py-5">
         <div className="container flex items-center gap-6 justify-between py-[10px]">
           <div className="flex gap-4 items-center">
-            <Icons.burger className="hidden mobile:block" />
+            <Icons.burger className="hidden mobile:block" onClick={open} />
+
             <Link href="/">
               <Icons.logo />
             </Link>
@@ -98,6 +102,8 @@ export function Header() {
             </button>
           ))}
         </div>
+
+        <Sidebar isOpen={isOpen} close={close} />
       </div>
     </header>
   )
