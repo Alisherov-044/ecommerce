@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer components {
+  .container {
+    @apply relative w-full max-w-[1220px] px-5 mx-auto
+  }
+
   .button {
     @apply relative px-4 rounded-md h-10 cursor-pointer
   }
@@ -17,5 +21,21 @@
 
   .select.primary {
     @apply border-blue-500
+  }
+
+  .input {
+    @apply relative flex gap-2 p-[10px] border-[1px] rounded-md
+  }
+
+  .input.primary {
+    @apply border-gray-500
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
   }
 }

@@ -1,4 +1,5 @@
 export { Icons } from '@/components/ui/Icons'
+export { Input } from '@/components/form/Input'
 export { Button } from '@/components/ui/Button'
 export { Select } from '@/components/form/Select'
 export { Header } from '@/components/layout/Header'

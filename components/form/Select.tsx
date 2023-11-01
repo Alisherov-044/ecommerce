@@ -31,7 +31,7 @@ export function Select({
       <div
         className={clsx([
           'absolute border-inherit w-[calc(100%+4px)] left-0 bottom-0 translate-y-full -translate-x-[2px] transition-opacity',
-          !isOpen && 'opacity-0',
+          !isOpen && 'opacity-0 pointer-events-none -z-50',
         ])}
       >
         {options
@@ -43,7 +43,7 @@ export function Select({
                 await setSelected(option)
                 close()
               }}
-              className="option select-none border-2 border-inherit p-[10px] cursor-pointer"
+              className="select-none border-2 border-b-0 border-inherit p-[10px] cursor-pointer bg-white last-of-type:border-b-2"
             >
               {option[fieldNames.title]}
             </div>

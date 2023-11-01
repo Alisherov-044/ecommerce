@@ -1,13 +1,20 @@
+import clsx from 'clsx'
 import { Button, Select } from '@/components'
 import { IGenericSearchInput } from '../__types__'
 
 export function GenericSearchInput({
   filterOptions,
+  className,
   type = 'text',
   placeholder = 'Search',
 }: IGenericSearchInput) {
   return (
-    <div className="relative flex flex-grow h-10 border-2 border-blue-500 rounded-md mr-20">
+    <div
+      className={clsx([
+        'relative flex flex-grow max-w-[665px] h-10 border-2 border-blue-500 rounded-md',
+        className,
+      ])}
+    >
       <input
         type={type}
         placeholder={placeholder}
