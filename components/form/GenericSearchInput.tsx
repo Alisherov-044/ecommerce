@@ -1,4 +1,4 @@
-import { Button } from '@/components'
+import { Button, Select } from '@/components'
 import { IGenericSearchInput } from '../__types__'
 
 export function GenericSearchInput({
@@ -7,12 +7,15 @@ export function GenericSearchInput({
   placeholder = 'Search',
 }: IGenericSearchInput) {
   return (
-    <div className="relative flex h-10 border-2 border-blue-500 rounded-md">
+    <div className="relative flex flex-grow h-10 border-2 border-blue-500 rounded-md mr-20">
       <input
         type={type}
         placeholder={placeholder}
-        className="max-w-[420px] w-full p-[10px]"
+        className="flex-grow p-[10px]"
       />
+      {filterOptions ? (
+        <Select options={filterOptions} className="h-full border-y-0" />
+      ) : null}
       <Button className="h-full rounded-none">Search</Button>
     </div>
   )

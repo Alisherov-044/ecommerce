@@ -10,4 +10,12 @@
   .button.primary {
     @apply bg-blue-500 text-white font-medium text-center
   }
+
+  .select {
+    @apply relative flex items-center gap-5 p-[10px] h-10 border-2
+  }
+
+  .select.primary {
+    @apply border-blue-500
+  }
 }

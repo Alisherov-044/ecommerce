@@ -1,9 +1,13 @@
 import { ReactNode } from 'react'
 
+export interface IOption {
+  [key: string]: string
+}
+
 export interface IGenericSearchInput {
   type?: string
   placeholder?: string
-  filterOptions?: object[]
+  filterOptions?: IOption[]
 }
 
 export interface IButton {
@@ -11,4 +15,15 @@ export interface IButton {
   className?: string
   variant?: 'primary'
   type?: 'button' | 'submit' | 'reset' | undefined
+}
+
+export interface ISelect {
+  options: IOption[]
+  className?: string
+  variant?: 'primary'
+  defaultValue?: IOption
+  fieldNames?: {
+    title: string
+    value: string
+  }
 }
