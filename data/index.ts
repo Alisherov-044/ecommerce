@@ -1,5 +1,6 @@
 export { headerPages } from '@/data/headerPages'
 export { sidebarPages } from '@/data/sidebarPages'
+export { tabCategories } from '@/data/tabCategories'
 export { categories } from '@/data/categories'
 export { countries } from '@/data/countries'
 export { currency } from '@/data/currency'

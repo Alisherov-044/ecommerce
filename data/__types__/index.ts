@@ -19,6 +19,8 @@ export interface ICategory {
   id: number
   title: string
   link: string
+  thumb?: string
+  description?: ReactNode
 }
 
 export interface ICurrency {
