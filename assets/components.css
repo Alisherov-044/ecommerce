@@ -23,6 +23,10 @@
     @apply border-blue-500
   }
 
+  .select.secondary {
+    @apply border-0 gap-1 border-transparent font-medium text-black px-0
+  }
+
   .input {
     @apply relative flex gap-2 p-[10px] border-[1px] rounded-md
   }

@@ -1,7 +1,7 @@
 import { FC, ReactNode, ComponentProps } from 'react'
 
 export interface IOption {
-  [key: string]: string
+  [key: string]: any
 }
 
 export interface IGenericSearchInput {
@@ -20,8 +20,10 @@ export interface IButton {
 
 export interface ISelect {
   options: IOption[]
+  suffix?: string
+  optionContacination?: keyof IOption
   className?: string
-  variant?: 'primary'
+  variant?: 'primary' | 'secondary'
   defaultValue?: IOption
   fieldNames?: {
     title: string

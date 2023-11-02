@@ -1,4 +1,4 @@
-import { FC, ComponentProps } from 'react'
+import { FC, ComponentProps, ReactNode } from 'react'
 
 interface IPage {
   id: number
@@ -13,4 +13,22 @@ export interface ISidebarPages {
   main: IPage[]
   additional: IPage[]
   privacy: Omit<IPage, 'Icon'>[]
+}
+
+export interface ICategory {
+  id: number
+  title: string
+  link: string
+}
+
+export interface ICurrency {
+  id: number
+  title: string
+  value: string
+}
+
+export interface ICountry {
+  id: number
+  name: string
+  flag: ReactNode
 }

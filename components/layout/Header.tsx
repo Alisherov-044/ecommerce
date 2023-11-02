@@ -1,43 +1,8 @@
 'use client'
 import Link from 'next/link'
 import { useSidebar } from '@/hooks'
-import { headerPages } from '@/data'
-import { Icons, GenericSearchInput, Input, Sidebar } from '@/components'
-
-const options = [
-  {
-    title: 'All category',
-    value: '#',
-  },
-  {
-    title: 'First category',
-    value: '#',
-  },
-  {
-    title: 'First category',
-    value: '#',
-  },
-  {
-    title: 'First category',
-    value: '#',
-  },
-  {
-    title: 'First category',
-    value: '#',
-  },
-  {
-    title: 'First category',
-    value: '#',
-  },
-  {
-    title: 'First category',
-    value: '#',
-  },
-  {
-    title: 'First category',
-    value: '#',
-  },
-]
+import { categories, countries, currency, headerPages } from '@/data'
+import { Icons, GenericSearchInput, Input, Sidebar, Select } from '@/components'
 
 export function Header() {
   const { isOpen, open, close } = useSidebar()
@@ -55,7 +20,7 @@ export function Header() {
           </div>
 
           <GenericSearchInput
-            filterOptions={options}
+            filterOptions={categories}
             className="tablet:hidden"
           />
 
@@ -93,7 +58,7 @@ export function Header() {
         </div>
 
         <div className="gap-1 hidden tablet:flex overflow-x-scroll no-scrollbar mt-4">
-          {options.map(({ title }, index) => (
+          {categories.map(({ title }, index) => (
             <button
               key={index}
               className="first-of-type:ml-5 last-of-type:mr-5 flex-shrink-0 p-[10px] rounded-md bg-gray-200 font-normal text-blue-600 cursor-pointer"
@@ -104,6 +69,36 @@ export function Header() {
         </div>
 
         <Sidebar isOpen={isOpen} close={close} />
+      </div>
+
+      <div className="relative w-full border-b-[1px] border-b-gray-300 py-4 tablet:hidden">
+        <div className="container flex items-center justify-between">
+          <div className="flex gap-6">
+            <Link href="#" className="flex gap-[6px]">
+              <Icons.burger />
+              <span className="font-medium text-black">All categories</span>
+            </Link>
+            {categories.slice(0, 5).map(({ id, title, link }) => (
+              <Link href={link} className="flex gap-[6px]" key={id}>
+                <span className="font-medium text-black">{title}</span>
+                {id === 5 && categories.length > 5 ? (
+                  <Icons.selectArrow />
+                ) : null}
+              </Link>
+            ))}
+          </div>
+
+          <div className="flex gap-8 items-center">
+            <Select options={currency} variant="secondary" />
+            <Select
+              options={countries}
+              suffix="Ship to"
+              optionContacination="name"
+              fieldNames={{ title: 'flag', value: 'flag' }}
+              variant="secondary"
+            />
+          </div>
+        </div>
       </div>
     </header>
   )

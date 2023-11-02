@@ -8,6 +8,8 @@ export function Select({
   options,
   className,
   defaultValue,
+  suffix,
+  optionContacination,
   variant = 'primary',
   fieldNames = { title: 'title', value: 'value' },
 }: ISelect) {
@@ -24,8 +26,8 @@ export function Select({
         className,
       ])}
     >
-      <span className="text-black font-normal select-none">
-        {selected[fieldNames.title]}
+      <span className="flex items-center gap-3 text-black select-none">
+        {suffix ? suffix : null} {selected[fieldNames.title]}
       </span>
       <Icons.selectArrow />
       <div
@@ -43,8 +45,9 @@ export function Select({
                 await setSelected(option)
                 close()
               }}
-              className="select-none border-2 border-b-0 border-inherit p-[10px] cursor-pointer bg-white last-of-type:border-b-2"
+              className="flex items-center gap-3 select-none border-2 border-b-0 border-inherit p-[10px] cursor-pointer bg-white last-of-type:border-b-2"
             >
+              {optionContacination ? option[optionContacination] : null}{' '}
               {option[fieldNames.title]}
             </div>
           ))}
