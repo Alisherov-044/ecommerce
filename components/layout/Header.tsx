@@ -9,7 +9,7 @@ export function Header() {
 
   return (
     <header className="relative w-full flex flex-col">
-      <div className="relative w-full border-b-[1px] border-b-gray-300 py-5">
+      <div className="relative w-full border-b-[1px] border-b-gray-300 tablet:border-b-0 py-5 tablet:py-2">
         <div className="container flex items-center gap-6 justify-between py-[10px]">
           <div className="flex gap-4 items-center">
             <Icons.burger className="hidden mobile:block" onClick={open} />
@@ -57,17 +57,6 @@ export function Header() {
           <Input type="search" placeholder="Search" Icon={Icons.search} />
         </div>
 
-        <div className="gap-1 hidden tablet:flex overflow-x-scroll no-scrollbar mt-4">
-          {categories.map(({ title }, index) => (
-            <button
-              key={index}
-              className="first-of-type:ml-5 last-of-type:mr-5 flex-shrink-0 p-[10px] rounded-md bg-gray-200 font-normal text-blue-600 cursor-pointer"
-            >
-              {title}
-            </button>
-          ))}
-        </div>
-
         <Sidebar isOpen={isOpen} close={close} />
       </div>
 
@@ -78,6 +67,7 @@ export function Header() {
               <Icons.burger />
               <span className="font-medium text-black">All categories</span>
             </Link>
+
             {categories.slice(0, 5).map(({ id, title, link }) => (
               <Link href={link} className="flex gap-[6px]" key={id}>
                 <span className="font-medium text-black">{title}</span>
@@ -90,6 +80,7 @@ export function Header() {
 
           <div className="flex gap-8 items-center">
             <Select options={currency} variant="secondary" />
+
             <Select
               options={countries}
               suffix="Ship to"

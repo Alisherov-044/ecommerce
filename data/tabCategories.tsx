@@ -8,8 +8,8 @@ export const tabCategories: ICategory[] = [
     thumb: '/category.svg',
     description: (
       <div className="flex flex-col">
-        <span className="text-2xl">Latest trending</span>
-        <h4 className="text-3xl font-bold">Electronic items</h4>
+        <span className="text-2xl tablet:text-lg">Latest trending</span>
+        <h4 className="text-3xl font-bold tablet:text-lg">Electronic items</h4>
       </div>
     ),
   },
@@ -20,8 +20,8 @@ export const tabCategories: ICategory[] = [
     thumb: '/category.svg',
     description: (
       <div className="flex flex-col">
-        <span className="text-2xl">Latest trending</span>
-        <h4 className="text-3xl font-bold">Clothes items</h4>
+        <span className="text-2xl tablet:text-lg">Latest trending</span>
+        <h4 className="text-3xl font-bold tablet:text-lg">Clothes items</h4>
       </div>
     ),
   },
@@ -32,8 +32,8 @@ export const tabCategories: ICategory[] = [
     thumb: '/category.svg',
     description: (
       <div className="flex flex-col">
-        <span className="text-2xl">Latest trending</span>
-        <h4 className="text-3xl font-bold">Home items</h4>
+        <span className="text-2xl tablet:text-lg">Latest trending</span>
+        <h4 className="text-3xl font-bold tablet:text-lg">Home items</h4>
       </div>
     ),
   },
@@ -44,8 +44,8 @@ export const tabCategories: ICategory[] = [
     thumb: '/category.svg',
     description: (
       <div className="flex flex-col">
-        <span className="text-2xl">Latest trending</span>
-        <h4 className="text-3xl font-bold">Computer items</h4>
+        <span className="text-2xl tablet:text-lg">Latest trending</span>
+        <h4 className="text-3xl font-bold tablet:text-lg">Computer items</h4>
       </div>
     ),
   },
@@ -56,8 +56,8 @@ export const tabCategories: ICategory[] = [
     thumb: '/category.svg',
     description: (
       <div className="flex flex-col">
-        <span className="text-2xl">Latest trending</span>
-        <h4 className="text-3xl font-bold">Tools items</h4>
+        <span className="text-2xl tablet:text-lg">Latest trending</span>
+        <h4 className="text-3xl font-bold tablet:text-lg">Tools items</h4>
       </div>
     ),
   },
@@ -68,8 +68,8 @@ export const tabCategories: ICategory[] = [
     thumb: '/category.svg',
     description: (
       <div className="flex flex-col">
-        <span className="text-2xl">Latest trending</span>
-        <h4 className="text-3xl font-bold">Sports items</h4>
+        <span className="text-2xl tablet:text-lg">Latest trending</span>
+        <h4 className="text-3xl font-bold tablet:text-lg">Sports items</h4>
       </div>
     ),
   },
@@ -80,8 +80,8 @@ export const tabCategories: ICategory[] = [
     thumb: '/category.svg',
     description: (
       <div className="flex flex-col">
-        <span className="text-2xl">Latest trending</span>
-        <h4 className="text-3xl font-bold">Animal items</h4>
+        <span className="text-2xl tablet:text-lg">Latest trending</span>
+        <h4 className="text-3xl font-bold tablet:text-lg">Animal items</h4>
       </div>
     ),
   },
@@ -92,8 +92,8 @@ export const tabCategories: ICategory[] = [
     thumb: '/category.svg',
     description: (
       <div className="flex flex-col">
-        <span className="text-2xl">Latest trending</span>
-        <h4 className="text-3xl font-bold">Machinery items</h4>
+        <span className="text-2xl tablet:text-lg">Latest trending</span>
+        <h4 className="text-3xl font-bold tablet:text-lg">Machinery items</h4>
       </div>
     ),
   },
@@ -104,8 +104,8 @@ export const tabCategories: ICategory[] = [
     thumb: '/category.svg',
     description: (
       <div className="flex flex-col">
-        <span className="text-2xl">Latest trending</span>
-        <h4 className="text-3xl font-bold">Electronic items</h4>
+        <span className="text-2xl tablet:text-lg">Latest trending</span>
+        <h4 className="text-3xl font-bold tablet:text-lg">Electronic items</h4>
       </div>
     ),
   },

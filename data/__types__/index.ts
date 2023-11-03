@@ -21,6 +21,7 @@ export interface ICategory {
   link: string
   thumb?: string
   description?: ReactNode
+  discount?: number
 }
 
 export interface ICurrency {
@@ -33,4 +34,21 @@ export interface ICountry {
   id: number
   name: string
   flag: ReactNode
+}
+
+export interface IProductImage {
+  id: number
+  src: string
+  isDefault?: boolean
+}
+
+export interface IProduct {
+  id: number
+  slug: string
+  name: string
+  category: string
+  price: number
+  discount?: number
+  description?: string
+  images: IProductImage[]
 }
